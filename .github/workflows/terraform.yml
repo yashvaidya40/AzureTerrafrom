@@ -7,10 +7,11 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
+    
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     # Set the working directory to main for the config files
-
+    environment: production
     steps:
       - name: install azure CLI
         run: sudo apt-get -y install azure-cli 
