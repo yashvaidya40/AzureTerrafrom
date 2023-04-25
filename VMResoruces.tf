@@ -40,7 +40,7 @@ resource "azurerm_virtual_network" "vnet1" {
   name                = "vishnuvnet"
   address_space       = ["10.0.0.0/16"]
   location            = "East US"
-  resource_group_name = "TerraformRG"
+  resource_group_name = "github"
 }
 
 
