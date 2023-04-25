@@ -2,8 +2,6 @@ name: 'Terraform'
 
 on: [push, pull_request]
 
-env:
-  TF_LOG: INFO
 
 jobs:
   terraform:
@@ -12,14 +10,10 @@ jobs:
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     # Set the working directory to main for the config files
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./main
 
     steps:
       - name: install azure CLI
-        run: curl -L https://aka.ms/InstallAzureCli | bash
+        run: curl -L https://aka.ms/InstallAzureCli | sh
       - name: azure login
         uses: Azure/login@v1.4.4
         with:
