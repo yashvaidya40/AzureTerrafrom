@@ -1,6 +1,6 @@
 resource "azurerm_virtual_machine" "vm1" {
   name                  = "VishnuVM"
-  resource_group_name   = "TerraformRG"
+  resource_group_name   = "github"
   location              = "East US"
   network_interface_ids = [azurerm_network_interface.nic1.id]
   vm_size               = "Standard_DS1_v2"
@@ -46,7 +46,7 @@ resource "azurerm_virtual_network" "vnet1" {
 
 resource "azurerm_subnet" "subnet1" {
   name                 = "vishnusubnet"
-  resource_group_name  = "TerraformRG"
+  resource_group_name  = "github"
   virtual_network_name = azurerm_virtual_network.vnet1.name
   address_prefixes     = ["10.0.2.0/24"]
 }
@@ -54,7 +54,7 @@ resource "azurerm_subnet" "subnet1" {
 resource "azurerm_network_interface" "nic1" {
   name                = "vishnunic"
   location            = "East US"
-  resource_group_name = "TerraformRG"
+  resource_group_name = "github"
 
   ip_configuration {
     name                          = "config1"
@@ -66,7 +66,7 @@ resource "azurerm_network_interface" "nic1" {
 
 resource "azurerm_public_ip" "public1" {
   name = "vishnupublicip"
-  resource_group_name = "TerraformRG"
+  resource_group_name = "github"
   location = "East US"
   allocation_method = "Static"
 
