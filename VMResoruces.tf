@@ -64,7 +64,7 @@ resource "azurerm_network_interface" "nic1" {
   }
 }
 
-resource "azurerm_public_ip" "public1" {
+resource "azurerm_public_ip" "public12" {
   name = "vishnupublicip"
   resource_group_name = "github"
   location = "East US"
