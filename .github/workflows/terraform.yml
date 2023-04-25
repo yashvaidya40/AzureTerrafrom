@@ -18,6 +18,8 @@ jobs:
         working-directory: ./main
 
     steps:
+      - name: install azure CLI
+        run: curl -L https://aka.ms/InstallAzureCli | bash
       - name: azure login
         uses: Azure/login@v1.4.4
         with:
