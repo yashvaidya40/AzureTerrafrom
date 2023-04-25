@@ -21,10 +21,9 @@ jobs:
       - name: install azure CLI
         run: sudo apt-get -y install azure-cli 
       - name: azure login
-        run: az login -u ${{ secrets.azureUser }} -p ${{ secrets.Password }}
-#         uses: Azure/login@v1.4.4
-#         with:
-#           creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+        uses: Azure/login@v1.4.4
+        with:
+          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
           
       
     # Checkout the repository to the GitHub Actions runner
