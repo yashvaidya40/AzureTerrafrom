@@ -1,11 +1,11 @@
 resource "azurerm_virtual_machine" "vm1" {
-  name                  = "VishnuVM"
+  name                  = "VishnuVM1"
   resource_group_name   = "github"
   location              = "East US"
   network_interface_ids = [azurerm_network_interface.nic1.id]
   vm_size               = "Standard_DS1_v2"
   storage_os_disk {
-    name = "vishnudisk"
+    name = "vishnudisk1"
     caching = "ReadWrite"
     managed_disk_type = "Standard_LRS"
     create_option = "FromImage"
@@ -37,7 +37,7 @@ resource "azurerm_virtual_machine" "vm1" {
 }
 
 resource "azurerm_virtual_network" "vnet1" {
-  name                = "shubham236"
+  name                = "shubham2361"
   address_space       = ["10.0.0.0/16"]
   location            = "East US"
   resource_group_name = "github"
@@ -45,19 +45,19 @@ resource "azurerm_virtual_network" "vnet1" {
 
 
 resource "azurerm_subnet" "subnet1" {
-  name                 = "vishnusubnet"
+  name                 = "vishnusubnet11"
   resource_group_name  = "github"
   virtual_network_name = azurerm_virtual_network.vnet1.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
 resource "azurerm_network_interface" "nic1" {
-  name                = "vishnunic"
+  name                = "vishnunic111"
   location            = "East US"
   resource_group_name = "github"
 
   ip_configuration {
-    name                          = "config1"
+    name                          = "config111"
     subnet_id                     = azurerm_subnet.subnet1.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id =azurerm_public_ip.public1.id
@@ -65,7 +65,7 @@ resource "azurerm_network_interface" "nic1" {
 }
 
 resource "azurerm_public_ip" "public1" {
-  name = "vishnupublicip16"
+  name = "vishnupublicip1611"
   resource_group_name = "github"
   location = "East US"
   allocation_method = "Static"
