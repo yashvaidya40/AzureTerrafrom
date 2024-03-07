@@ -37,7 +37,7 @@ resource "azurerm_virtual_machine" "vm1" {
 }
 
 resource "azurerm_virtual_network" "vnet1" {
-  name                = "shubham2361"
+  name                = "hemant"
   address_space       = ["10.0.0.0/16"]
   location            = "East US"
   resource_group_name = "TerraformRG"
@@ -45,7 +45,7 @@ resource "azurerm_virtual_network" "vnet1" {
 
 
 resource "azurerm_subnet" "subnet1" {
-  name                 = "vishnusubnet11"
+  name                 = "hrmante"
   resource_group_name  = "TerraformRG"
   virtual_network_name = azurerm_virtual_network.vnet1.name
   address_prefixes     = ["10.0.2.0/24"]
