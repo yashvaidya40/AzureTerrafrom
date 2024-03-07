@@ -1,5 +1,5 @@
 resource "azurerm_virtual_machine" "vm1" {
-  name                  = "gitAction"
+  name                  = "hemantvm"
   resource_group_name   = "TerraformRG"
   location              = "East US"
   network_interface_ids = [azurerm_network_interface.nic1.id]
