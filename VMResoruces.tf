@@ -1,6 +1,6 @@
 resource "azurerm_virtual_machine" "vm1" {
-  name                  = "VishnuVM1"
-  resource_group_name   = "github"
+  name                  = "gitAction"
+  resource_group_name   = "TerraformRG"
   location              = "East US"
   network_interface_ids = [azurerm_network_interface.nic1.id]
   vm_size               = "Standard_DS1_v2"
