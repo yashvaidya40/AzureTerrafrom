@@ -37,7 +37,7 @@ resource "azurerm_virtual_machine" "vm1" {
 }
 
 resource "azurerm_virtual_network" "vnet1" {
-  name                = "testetstetest2"
+  name                = "testdatatest"
   address_space       = ["10.0.0.0/16"]
   location            = "East US"
   resource_group_name = "TerraformRG"
@@ -65,7 +65,7 @@ resource "azurerm_network_interface" "nic1" {
 }
 
 resource "azurerm_public_ip" "public1" {
-  name = "testetstetest-tywteywgjh2"
+  name = "testetstedatat-tywteywgjh2"
   resource_group_name = "TerraformRG"
   location = "East US"
   allocation_method = "Static"
