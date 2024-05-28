@@ -52,7 +52,7 @@ resource "azurerm_subnet" "subnet1" {
 }
 
 resource "azurerm_network_interface" "nic1" {
-  name                = "vishnunic1112"
+  name                = "vishnunic11232"
   location            = "East US"
   resource_group_name = "TerraformRG"
 
